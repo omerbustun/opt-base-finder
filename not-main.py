@@ -15,4 +15,3 @@ def sel_x_value(H , W, U):
 
 if __name__ == "__main__":
   sel_x_value(H, W, U)
-

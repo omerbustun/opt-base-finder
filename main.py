@@ -3,15 +3,15 @@ import numpy as np
 
 H = int(input("Enter height: "))
 W = int(input("Enter width: "))
-U = int(input("Enter number of users: "))
+S = int(input("Enter number of subscribers: "))
 
 area = np.zeros((H ,W)) #creates a 10 by 10 area matrix and populates it with zeros
 
-area.flat[np.random.choice(H * W, U, replace=False)] = 1 #flattens the matrix to an array, randomly selects 10 values and changes them to 1
+area.flat[np.random.choice(H * W, S, replace=False)] = 1 #flattens the matrix to an array, randomly selects 10 values and changes them to 1
 print(area)
 
-ones = np.where(area == 1)
-listOfIndices = list(zip(ones[0], ones[1]))
+subs = np.where(area == 1)
+listOfIndices = list(zip(subs[0], subs[1]))
 distances = []
 energyCostMid = []
 energyCostOpt = []
@@ -37,6 +37,6 @@ for i in range(H):
 
 energyCostOpt.sort(key=lambda x: x.cost)
 
-print(f"Total energy consumption when the base tower is in the middle: {sum(energyCostMid)}")
-print(f"Optimum coordinates for optimum energy consumption: X: {energyCostOpt[0].x} Y: {energyCostOpt[0].y}")
-print(f"Total energy consumption when the base tower is in the optimum coordinates: {energyCostOpt[0].cost}")
+print(f"Total energy consumption when the base tower is in the middle: {round(sum(energyCostMid), 2)}")
+print(f"Optimum coordinates for optimum energy consumption: X: {energyCostOpt[0].y + 1} Y: {energyCostOpt[0].x + 1}")
+print(f"Total energy consumption when the base tower is in the optimum coordinates: {round(energyCostOpt[0].cost, 2)}")

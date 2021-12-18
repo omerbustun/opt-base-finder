@@ -37,6 +37,6 @@ for i in range(H):
 
 energyCostOpt.sort(key=lambda x: x.cost)
 
-print(f"Total energy consumption when the base tower is in the middle: {round(sum(energyCostMid), 2)}")
-print(f"Optimum coordinates for optimum energy consumption: X: {energyCostOpt[0].y + 1} Y: {energyCostOpt[0].x + 1}")
-print(f"Total energy consumption when the base tower is in the optimum coordinates: {round(energyCostOpt[0].cost, 2)}")
+print(f"Energy con. with BS in the center: {round(sum(energyCostMid), 2)}")
+print(f"Optimum coordinates: X: {energyCostOpt[0].y + 1} Y: {energyCostOpt[0].x + 1}")
+print(f"Energy con. with BS in the opt. coordinates: {round(energyCostOpt[0].cost, 2)}")

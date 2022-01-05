@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import numpy as np
 
-H = int(input("Enter height: "))
-W = int(input("Enter width: "))
-S = int(input("Enter number of subscribers: "))
+H = 10 #int(input("Enter height: "))
+W = 10 #int(input("Enter width: "))
+S = 10 #int(input("Enter number of subscribers: "))
 
 area = np.zeros((H ,W)) #creates a 10 by 10 area matrix and populates it with zeros
 
